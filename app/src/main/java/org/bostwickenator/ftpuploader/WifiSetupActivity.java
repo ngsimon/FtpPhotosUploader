@@ -32,7 +32,8 @@ public class WifiSetupActivity extends Activity {
         setContentView(R.layout.activity_wifi_setup);
         res = getResources();
 
-        wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+        //wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+        wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
 
         if (hasConnection()) { //Short circuit everything if we have some kind of upstream connection. Useful in emulators

@@ -7,8 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 class FilesystemScanner {
-    public static List<File> getImagesOnExternalStorage() {
-        return getFilteredFileList(Environment.getExternalStorageDirectory(), ".jpg", ".arw");
+    public static List<File> getRawsOnExternalStorage() {
+        return getFilteredFileList(Environment.getExternalStorageDirectory(), ".arw");
+    }
+
+    public static List<File> getJpgsOnExternalStorage() {
+        return getFilteredFileList(Environment.getExternalStorageDirectory(), ".jpg");
     }
 
     public static List<File> getVideosOnExternalStorage() {

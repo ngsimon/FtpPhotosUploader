@@ -12,6 +12,18 @@
         android:orientation="vertical">
 
         <CheckBox
+            android:id="@+id/checkBoxUploadRaws"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/upload_raws" />
+
+        <CheckBox
+            android:id="@+id/checkBoxUploadJpgs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/upload_jpgs" />
+
+        <CheckBox
             android:id="@+id/checkBoxUploadVideos"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
