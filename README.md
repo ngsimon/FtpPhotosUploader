@@ -5,7 +5,8 @@ A tool that allows you to upload photos directly from your camera to an FTP serv
 
 ## 2024/09/05
 - Added the options "Upload Raw" and "Upload JPG" to select which kind of file to upload.
-- Removed the increase buffer size (it makes ILCE7 crashing)
+- Removed the increase buffer size (it makes ILCE7 crashing).
+- Added the option to only upload the videos/pictures taken on the same day.
 
 # Rebuild note
 ```
