@@ -30,6 +30,12 @@
             android:text="@string/upload_videos" />
 
         <CheckBox
+            android:id="@+id/checkBoxUploadTodayOnly"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/upload_today_only" />
+
+        <CheckBox
             android:id="@+id/checkBoxDeleteAfterUpload"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

@@ -17,6 +17,7 @@ public class SettingsActivity extends BaseActivity {
     public static final String SETTING_UPLOAD_VIDEOS = "upload_videos";
     public static final String SETTING_UPLOAD_RAWS = "upload_raw";
     public static final String SETTING_UPLOAD_JPGS = "upload_jpg";
+    public static final String SETTING_TODAY_ONLY = "upload_today_only";
 
 
     public static final String SETTING_DELETE_AFTER_UPLOAD = "delete_after_upload";
@@ -53,6 +54,7 @@ public class SettingsActivity extends BaseActivity {
         setupCheckbox(R.id.checkBoxUploadVideos, SETTING_UPLOAD_VIDEOS);
         setupCheckbox(R.id.checkBoxUploadRaws, SETTING_UPLOAD_RAWS);
         setupCheckbox(R.id.checkBoxUploadJpgs, SETTING_UPLOAD_JPGS);
+        setupCheckbox(R.id.checkBoxUploadTodayOnly, SETTING_TODAY_ONLY);
         setupCheckbox(R.id.checkBoxPassive, SETTING_PASSIVE);
         setupCheckbox(R.id.checkBoxCreateAlbum, SETTING_CREATE_ALBUM);
 

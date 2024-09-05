@@ -55,6 +55,8 @@ class FtpClient {
 
     public boolean storeFile(File file) throws IOException {
         //this.ftpClient.setBufferSize(1024 * 1024 * 8);
+        // Set the buffer size to 16KB (16,384 bytes)
+        this.ftpClient.setBufferSize(16384);
         FileInputStream fis = new FileInputStream(file);
         boolean result = this.ftpClient.storeFile(file.getName(), fis);
         fis.close();

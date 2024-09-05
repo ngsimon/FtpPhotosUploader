@@ -18,6 +18,7 @@ import com.github.ma1co.pmcademo.app.Logger;
 import static java.lang.String.format;
 import static org.bostwickenator.ftpuploader.SettingsActivity.SETTING_CREATE_ALBUM;
 import static org.bostwickenator.ftpuploader.SettingsActivity.SETTING_DELETE_AFTER_UPLOAD;
+import static org.bostwickenator.ftpuploader.SettingsActivity.SETTING_TODAY_ONLY;
 import static org.bostwickenator.ftpuploader.SettingsActivity.SETTING_UPLOAD_VIDEOS;
 import static org.bostwickenator.ftpuploader.SettingsActivity.SETTING_UPLOAD_RAWS;
 import static org.bostwickenator.ftpuploader.SettingsActivity.SETTING_UPLOAD_JPGS;
@@ -185,19 +186,20 @@ public class MainActivity extends BaseActivity {
 
     private List<File> getFilesToUpload(){
         List<File> files = new ArrayList<>();
+        Boolean todayOnly = settingsStore().getBoolean(SETTING_TODAY_ONLY, false);
 
         if(settingsStore().getBoolean(SETTING_UPLOAD_RAWS, false)) {
-            List<File> raws = FilesystemScanner.getRawsOnExternalStorage();
+            List<File> raws = FilesystemScanner.getRawsOnExternalStorage(todayOnly);
             files.addAll(raws);
         }
 
         if(settingsStore().getBoolean(SETTING_UPLOAD_JPGS, false)) {
-            List<File> jpgs = FilesystemScanner.getJpgsOnExternalStorage();
+            List<File> jpgs = FilesystemScanner.getJpgsOnExternalStorage(todayOnly);
             files.addAll(jpgs);
         }
 
         if(settingsStore().getBoolean(SETTING_UPLOAD_VIDEOS, false)) {
-            List<File> videos = FilesystemScanner.getVideosOnExternalStorage();
+            List<File> videos = FilesystemScanner.getVideosOnExternalStorage(todayOnly);
             files.addAll(videos);
         }
 

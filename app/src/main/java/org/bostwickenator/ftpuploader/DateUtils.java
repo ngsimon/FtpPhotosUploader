@@ -1,11 +1,10 @@
 package org.bostwickenator.ftpuploader;
 
+import com.github.ma1co.openmemories.framework.DateTime;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Calendar;
 import java.util.Locale;
-import com.github.ma1co.openmemories.framework.DateTime;
-
 
 class DateUtils {
 
@@ -22,6 +21,7 @@ class DateUtils {
 
     public static Calendar getDateTime() {
         // Get the current time as a Calendar instance using the openmemories DateTime framework
-        return DateTime.getInstance().getCurrentTime();
+        return com.github.ma1co.openmemories.framework.DateTime.getInstance().getCurrentTime();
     }
+    
 }
